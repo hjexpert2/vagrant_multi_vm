@@ -10,7 +10,7 @@ ADDITIONALFILES = Dir.pwd + "/VagrantMultiAdditionalFiles"
 Vagrant.configure("2") do |config|
 
   config.vm.synced_folder Dir.pwd, "/vagrant", disabled: true
-  config.vm.box = "hashicorp/precise64"	
+  config.vm.box = "ubuntu/trusty64"	
 
   # Configure the Web Server
   config.vm.define "WebExampleBox" do |web|
