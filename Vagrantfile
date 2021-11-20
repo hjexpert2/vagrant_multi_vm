@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
     # After vagrant up, should see VM's web page in browser at 192.168.3.5
     web.vm.network "private_network", ip: "192.168.3.5"
     web.vm.hostname = "Web"
-    web.vm.synced_folder ADDITIONALFILES, "/var/www"
+    web.vm.synced_folder ADDITIONALFILES, "/var/www/html"
     web.vm.provision :shell, path: "web_provision.sh"
 
     # display this message at end of vagrant up
